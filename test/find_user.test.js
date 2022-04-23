@@ -42,8 +42,8 @@ describe("Unit tests for user: find all, find by id.", function () {
       }
       expect(userNameList.includes(testName)).to.be.true;
     } catch (error) {
-      console.error(error);
       console.error("failed find all user unit test.");
+      return err;
     }
   });
 

@@ -38,8 +38,8 @@ describe("Unit tests for user: update by id.", function () {
       expect(result.statusCode).to.be.equal(400);
       expect(result.message).to.be.equal(noInforChangedMsg);
     } catch (error) {
-      console.error(error);
       console.error("failed update user 01 unit test.");
+      return err;
     }
   });
 
@@ -50,8 +50,8 @@ describe("Unit tests for user: update by id.", function () {
       expect(result.statusCode).to.be.equal(400);
       expect(result.message).to.be.equal(noInforChangedMsg);
     } catch (error) {
-      console.error(error);
       console.error("failed update user 02 unit test.");
+      return err;
     }
   });
 
@@ -62,8 +62,8 @@ describe("Unit tests for user: update by id.", function () {
       expect(result.statusCode).to.be.equal(400);
       expect(result.message).to.be.equal(noInforChangedMsg);
     } catch (error) {
-      console.error(error);
       console.error("failed update user 03 unit test.");
+      return err;
     }
   });
 
@@ -76,8 +76,8 @@ describe("Unit tests for user: update by id.", function () {
       expect(result.statusCode).to.be.equal(404);
       expect(result.message).to.be.equal(noUserForIdMsg);
     } catch (error) {
-      console.error(error);
       console.error("failed update user 04 unit test.");
+      return err;
     }
   });
 
@@ -101,8 +101,8 @@ describe("Unit tests for user: update by id.", function () {
       expect(result.address).to.be.equal(newAddr);
       expect(result.description).to.be.equal(newDesc);
     } catch (error) {
-      console.error(error);
       console.error("failed update user 05 unit test.");
+      return err;
     }
   });
 
@@ -119,8 +119,8 @@ describe("Unit tests for user: update by id.", function () {
       expect(result.statusCode).to.be.equal(400);
       expect(result.message).to.be.equal(noInforChangedMsg);
     } catch (error) {
-      console.error(error);
       console.error("failed update user 06 unit test.");
+      return err;
     }
   });
 

@@ -7,7 +7,7 @@ module.exports = function (user) {
     try {
       return await UserService.updateById(id, name, dob, address, description);
     } catch (err) {
-      logger.error(err);
+      return err;
     }
   };
   user.remoteMethod("updateById", {
@@ -45,7 +45,7 @@ module.exports = function (user) {
     try {
       return await UserService.getById(id);
     } catch (err) {
-      logger.error(err);
+      return err;
     }
   };
   user.remoteMethod("getById", {
@@ -67,7 +67,7 @@ module.exports = function (user) {
     try {
       return await UserService.getAll();
     } catch (err) {
-      logger.error(err);
+      return err;
     }
   };
   user.remoteMethod("getAll", {
@@ -81,7 +81,7 @@ module.exports = function (user) {
     try {
       return await UserService.createUser(name, dob, address, description);
     } catch (err) {
-      logger.error(err);
+      return err;
     }
   };
   user.remoteMethod("createUser", {
@@ -115,7 +115,7 @@ module.exports = function (user) {
       try {
         return await UserService.deleteById(id);
       } catch (err) {
-        logger.error(err);
+        return err;
       }
     };
   });

@@ -30,8 +30,8 @@ describe("Unit tests for delete user by id.", function () {
       const result = await userService.deleteById(testId);
       expect(result.count).to.be.equal(1);
     } catch (error) {
-      console.error(error);
       console.error("failed create new user unit test.");
+      return err;
     }
   });
 });

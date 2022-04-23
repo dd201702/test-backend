@@ -56,7 +56,7 @@ exports.updateById = async (id, name, dob, address, description) => {
     //End check if no need update db.
     return await user.updateAttributes(inputValues);
   } catch (err) {
-    logger.error(err);
+    return err;
   }
 };
 
@@ -68,7 +68,7 @@ exports.getById = async (id) => {
     }
     return result;
   } catch (err) {
-    logger.error(err);
+    return err;
   }
 };
 
@@ -80,7 +80,7 @@ exports.getAll = async () => {
     result.data = users;
     return result;
   } catch (err) {
-    logger.error(err);
+    return err;
   }
 };
 
@@ -96,7 +96,7 @@ exports.createUser = async (name, dob, address, description) => {
     userObj.description = description;
     return await loopback.findModel(objectType).create(userObj);
   } catch (err) {
-    logger.error(err);
+    return err;
   }
 };
 
@@ -107,6 +107,6 @@ exports.deleteById = async (id) => {
     // let user = await loopback.findModel(objectType).findById(id);
     return await loopback.findModel(objectType).destroyById(id);
   } catch (err) {
-    logger.error(err);
+    return err;
   }
 };

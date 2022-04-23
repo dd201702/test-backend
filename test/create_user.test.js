@@ -32,8 +32,8 @@ describe("Unit tests for create user.", function () {
       expect(result.description).to.be.equal(description);
       id = result.id;
     } catch (error) {
-      console.error(error);
       console.error("failed create new user unit test.");
+      return err;
     }
   });
 
